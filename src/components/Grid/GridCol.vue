@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ span: number }>()
+defineProps<{ span?: number | string }>()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ defineProps<{ span: number }>()
 </template>
 
 <style scoped>
-.grid-col {
-    /*grid-column: 1 / 3;*/
-}
+/* .grid-col {
+    grid-column: 1 / 3;
+} */
 </style>
