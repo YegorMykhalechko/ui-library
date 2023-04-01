@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Grid from "../components/Grid/Grid.vue";
-import GridCol from "../components/Grid/GridCol.vue";
+import UiGrid from "../components/UiLoyout/UiGrid/UiGrid.vue";
+import UiGridCol from "../components/UiLoyout/UiGridCol/UiGridCol.vue";
 import ColorPreview from "./ColorPreview.vue";
 
 const monochromatic = {
@@ -22,59 +22,59 @@ const monochromatic = {
 </script>
 
 <template>
-  <Grid>
-    <GridCol span="1/13">
+  <UiGrid>
+    <UiGridCol span="1/13">
       <h1>Colours</h1>
-    </GridCol>
-    <GridCol span="1/13">
+    </UiGridCol>
+    <UiGridCol span="1/13">
       <h2>Monochromatic</h2>
-    </GridCol>
+    </UiGridCol>
 
-    <GridCol span="1/7">
+    <UiGridCol span="1/7">
       <ColorPreview v-bind="monochromatic.White" />
-    </GridCol>
+    </UiGridCol>
 
-    <GridCol span="7/13">
+    <UiGridCol span="7/13">
       <ColorPreview v-bind="monochromatic.Black" />
-    </GridCol>
+    </UiGridCol>
 
-    <GridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Alabaster" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.BlackHaze" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Concrete" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Concrete" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Gallery" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Mercury" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Atto" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Silver" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Delta" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.Dull" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.DoveGrey" />
-    </GridCol>
-    <GridCol>
+    </UiGridCol>
+    <UiGridCol>
       <ColorPreview v-bind="monochromatic.MineShaft" />
-    </GridCol>
-  </Grid>
+    </UiGridCol>
+  </UiGrid>
 </template>
 
 <style scoped></style>

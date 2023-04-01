@@ -1,0 +1,8 @@
+.grid {
+  background: orange;
+}
+.grid > div {
+  background-color: red;
+  padding: 20px 0;
+  text-align: center;
+}

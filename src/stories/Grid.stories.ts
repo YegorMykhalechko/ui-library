@@ -1,14 +1,16 @@
-import Grid from '../components/Grid/Grid.vue';
-import GridCol from  '../components/Grid/GridCol.vue'
+import { UiGrid, UiGridCol, UiContainer } from "../components/UiLoyout";
+
+import "./main.css";
 
 export default {
-    title: 'Grid',
-    component: Grid,
+  title: "Loyout",
+  component: UiGrid,
 };
 
 const Template = () => ({
-    components: { Grid, GridCol },
-    template: '<Grid><GridCol span="1/3">1/3</GridCol><GridCol span="3/8">3/8</GridCol></Grid>',
+  components: { UiGrid, UiGridCol, UiContainer },
+  template:
+    '<UiContainer><UiGrid><UiGridCol span="2" lgSpan="1">span 2/lg 1</UiGridCol><UiGridCol span="1" mdSpan="4">span 1/ md 4/ lg 5</UiGridCol><UiGridCol span="1" mdSpan="6">span 1/ md6</UiGridCol></UiGrid></UiContainer>',
 });
 
-export const GridStory = Template.bind({});
+export const Grid = Template.bind({});
