@@ -1,6 +1,6 @@
 <template>
   <UiContainer>
-    <UiGrid>
+    <UiGrid class="grid-story">
       <UiGridCol span="2" lgSpan="4">span 2/ lg4</UiGridCol>
       <UiGridCol span="1" mdSpan="4" lgSpan="2">span 1/ md4/ lg2</UiGridCol>
       <UiGridCol span="1" mdSpan="6">span 1/ md6</UiGridCol>

@@ -1,8 +1,12 @@
-.grid {
+.grid-story {
   background: orange;
 }
-.grid > div {
+.grid-story > div {
   background-color: red;
   padding: 20px 0;
   text-align: center;
+}
+
+.mt-24 {
+  margin-top: 24px;
 }

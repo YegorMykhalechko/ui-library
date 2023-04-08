@@ -1,14 +1,21 @@
 <script setup lang="ts">
-defineProps<{ title: string; value: string; inverted?: boolean }>();
+defineProps<{
+  title: string;
+  colorVariable: string;
+  value: string;
+  inverted?: boolean;
+  bordered?: boolean;
+}>();
 </script>
 
 <template>
   <section
-    :class="['color', { 'color--inverted': inverted }]"
-    :style="{ backgroundColor: value }"
+    class="color"
+    :class="{ 'color--inverted': inverted, 'color--bordered': bordered }"
+    :style="{ backgroundColor: `var(--${colorVariable})` }"
   >
     <div>{{ title }}</div>
-    <div>{{ value }}</div>
+    <div class="color__value">{{ value }}</div>
   </section>
 </template>
 
@@ -18,6 +25,10 @@ defineProps<{ title: string; value: string; inverted?: boolean }>();
   box-sizing: border-box;
   padding: 12px;
   border-radius: 2px;
+}
+
+.color--bordered {
+  border: 1px solid var(--monochromatic-nobel);
 }
 
 .color--inverted {
