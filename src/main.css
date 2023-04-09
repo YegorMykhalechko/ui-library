@@ -18,11 +18,17 @@
   --primary-surf-green: #119476;
   --primary-whiskey: #D29E61;
   --primary-salmon: #FF8173;
-
   --primary-navy: #0C5E96;
   --primary-green-haze: #00B22D;
   --primary-mustard: #FFD657;
   --primary-valencia: #D93A39;
+
+  --tint-move-blue-20: #5D8196;
+  --tint-move-blue-40: #85A0B0;
+  --tint-move-blue-60: #AEC0CB;
+  --tint-navy-20: #3D7EAB;
+  --tint-navy-40: #6D9EC0;
+  --tint-navy-60: #9EBFD5;
 }
 
 .black{

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  title: string;
+  title?: string;
   colorVariable: string;
   value: string;
   inverted?: boolean;
@@ -14,7 +14,7 @@ defineProps<{
     :class="{ 'color--inverted': inverted, 'color--bordered': bordered }"
     :style="{ backgroundColor: `var(--${colorVariable})` }"
   >
-    <div>{{ title }}</div>
+    <div v-if="title">{{ title }}</div>
     <div class="color__value">{{ value }}</div>
   </section>
 </template>

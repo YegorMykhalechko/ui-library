@@ -3,7 +3,7 @@ import { UiContainer, UiGrid, UiGridCol } from "../components/UiLoyout";
 import ColorPreview from "./ColorPreview.vue";
 
 type Color = {
-  title: string;
+  title?: string;
   value: string;
   colorVariable: string;
   inverted?: boolean;
@@ -143,10 +143,19 @@ const primary2: Record<string, Color> = {
     inverted: true,
   },
 };
+
+const blueTints: Color[] = [
+  { colorVariable: "tint-move-blue-20", value: "#5D8196" },
+  { colorVariable: "tint-move-blue-40", value: "#85A0B0" },
+  { colorVariable: "tint-move-blue-60", value: "#AEC0CB" },
+  { colorVariable: "tint-navy-20", value: "#3D7EAB" },
+  { colorVariable: "tint-navy-40", value: "#6D9EC0" },
+  { colorVariable: "tint-navy-60", value: "#9EBFD5" },
+];
 </script>
 
 <template>
-  <UiContainer class="black">
+  <UiContainer>
     <h2>Monochromatic</h2>
     <UiGrid>
       <UiGridCol span="2" mdSpan="6">
@@ -184,6 +193,21 @@ const primary2: Record<string, Color> = {
         :key="index"
       >
         <ColorPreview v-bind="item" />
+      </UiGridCol>
+    </UiGrid>
+    <h2>Tints / 20%, 40%, 60% White</h2>
+    <UiGrid>
+      <UiGridCol span="3">
+        <UiGrid>
+          <UiGridCol
+            v-for="(color, index) in blueTints"
+            span="4"
+            mdSpan="6"
+            :class="{ 'mt-1': index > 1 }"
+          >
+            <ColorPreview v-bind="color" />
+          </UiGridCol>
+        </UiGrid>
       </UiGridCol>
     </UiGrid>
   </UiContainer>
